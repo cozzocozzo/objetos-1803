@@ -11,14 +11,21 @@ package serializar;
  */
 public class Aplicacion {
     public static void main(String[] args) throws Exception {
+       
+        for(Cliente c:PersistenciaUsuario.leer()){
+            System.out.println("Nombre"+c.getNombre());
+        }
         
-        //pues ya es hora de usarlo
-        Cliente c=new Cliente();
-        c.setEdad(19);
-        c.setNombre("Celeste");
-        c.setSueldo(45000);
         
-        PersistenciaUsuario.guardar(c);
-        System.out.println("Guardado con exito");
-    }
+        
+   //Cliente c=PersistenciaUsuario.leer();
+     //  System.out.println("Vamos a checar el nombre "+c.getNombre());
+    /*
+    Cliente c=new Cliente();
+    c.setNombre("naranja");
+    c.setEdad(5);
+    PersistenciaUsuario.guardar(c);
+    
+*/
+}
 }
